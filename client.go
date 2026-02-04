@@ -66,6 +66,9 @@ type options struct {
 	traceFinishEventProcessor  func(ctx context.Context, info *FinishEventInfo)
 	traceTagTruncateConf       *TagTruncateConf
 	traceQueueConf             *TraceQueueConf
+
+	localFileExportEnabled bool
+	localFileExportPath    string
 }
 
 func (o *options) MD5() string {
@@ -89,6 +92,8 @@ func (o *options) MD5() string {
 	h.Write([]byte(fmt.Sprintf("%p", o.traceFinishEventProcessor) + separator))
 	h.Write([]byte(fmt.Sprintf("%p", o.traceTagTruncateConf) + separator))
 	h.Write([]byte(fmt.Sprintf("%p", o.traceQueueConf) + separator))
+	h.Write([]byte(fmt.Sprintf("%v", o.localFileExportEnabled) + separator))
+	h.Write([]byte(o.localFileExportPath + separator))
 	return hex.EncodeToString(h.Sum(nil))
 }
 
@@ -157,14 +162,16 @@ func NewClient(opts ...Option) (Client, error) {
 		fileUploadPath = options.apiBasePath.TraceFileUploadPath
 	}
 	c.traceProvider = trace.NewTraceProvider(httpClient, trace.Options{
-		WorkspaceID:          options.workspaceID,
-		UltraLargeReport:     options.ultraLargeReport,
-		Exporter:             options.exporter,
-		FinishEventProcessor: traceFinishEventProcessor,
-		TagTruncateConf:      (*trace.TagTruncateConf)(options.traceTagTruncateConf),
-		SpanUploadPath:       spanUploadPath,
-		FileUploadPath:       fileUploadPath,
-		QueueConf:            (*trace.QueueConf)(options.traceQueueConf),
+		WorkspaceID:            options.workspaceID,
+		UltraLargeReport:       options.ultraLargeReport,
+		Exporter:               options.exporter,
+		FinishEventProcessor:   traceFinishEventProcessor,
+		TagTruncateConf:        (*trace.TagTruncateConf)(options.traceTagTruncateConf),
+		SpanUploadPath:         spanUploadPath,
+		FileUploadPath:         fileUploadPath,
+		QueueConf:              (*trace.QueueConf)(options.traceQueueConf),
+		LocalFileExportEnabled: options.localFileExportEnabled,
+		LocalFileExportPath:    options.localFileExportPath,
 	})
 	c.promptProvider = prompt.NewPromptProvider(httpClient, c.traceProvider, prompt.Options{
 		WorkspaceID:                options.workspaceID,
@@ -310,6 +317,23 @@ func WithTraceQueueConf(conf *TraceQueueConf) Option {
 	}
 }
 
+// WithLocalFileExport enables or disables local file export.
+// When enabled, spans are exported to both the server and a local markdown file.
+// Default is false.
+func WithLocalFileExport(enabled bool) Option {
+	return func(p *options) {
+		p.localFileExportEnabled = enabled
+	}
+}
+
+// WithLocalFileExportPath sets the path for local file export.
+// Default is "./cozeloop_traces.md".
+func WithLocalFileExportPath(path string) Option {
+	return func(p *options) {
+		p.localFileExportPath = path
+	}
+}
+
 // GetWorkspaceID return space id
 func GetWorkspaceID() string {
 	return getDefaultClient().GetWorkspaceID()
@@ -374,6 +398,14 @@ func buildOptionsFromEnv(opts *options) {
 	}
 	if jwtOAuthPublicKeyID := os.Getenv(EnvJwtOAuthPublicKeyID); jwtOAuthPublicKeyID != "" {
 		opts.jwtOAuthPublicKeyID = jwtOAuthPublicKeyID
+	}
+
+	// Local file export options
+	if localFileExportEnabled := os.Getenv(EnvLocalFileExportEnabled); localFileExportEnabled != "" {
+		opts.localFileExportEnabled = strings.ToLower(localFileExportEnabled) == "true"
+	}
+	if localFileExportPath := os.Getenv(EnvLocalFileExportPath); localFileExportPath != "" {
+		opts.localFileExportPath = localFileExportPath
 	}
 }
 

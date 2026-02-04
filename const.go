@@ -17,6 +17,10 @@ const (
 	EnvJwtOAuthPrivateKey  = "COZELOOP_JWT_OAUTH_PRIVATE_KEY"
 	EnvJwtOAuthPublicKeyID = "COZELOOP_JWT_OAUTH_PUBLIC_KEY_ID"
 
+	// environment keys for local file export
+	EnvLocalFileExportEnabled = "COZELOOP_LOCAL_FILE_EXPORT_ENABLED"
+	EnvLocalFileExportPath    = "COZELOOP_LOCAL_FILE_EXPORT_PATH"
+
 	// ComBaseURL = consts.ComBaseURL
 	CnBaseURL = consts.CnBaseURL
 )
