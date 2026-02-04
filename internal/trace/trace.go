@@ -30,6 +30,10 @@ type Options struct {
 	SpanUploadPath       string
 	FileUploadPath       string
 	QueueConf            *QueueConf
+
+	// Local file export options
+	LocalFileExportEnabled bool
+	LocalFileExportPath    string
 }
 
 type StartSpanOptions struct {
@@ -53,6 +57,16 @@ func NewTraceProvider(httpClient *httpclient.Client, options Options) *Provider 
 			fileUploadPath: options.FileUploadPath,
 		}
 	}
+
+	// Build local file export options
+	var localFileOpts *LocalFileExportOptions
+	if options.LocalFileExportEnabled {
+		localFileOpts = &LocalFileExportOptions{
+			Enabled:  options.LocalFileExportEnabled,
+			FilePath: options.LocalFileExportPath,
+		}
+	}
+
 	c := &Provider{
 		httpClient: httpClient,
 		opt:        &options,
@@ -62,6 +76,7 @@ func NewTraceProvider(httpClient *httpclient.Client, options Options) *Provider 
 			uploadPath,
 			options.FinishEventProcessor,
 			options.QueueConf,
+			localFileOpts,
 		),
 	}
 	return c

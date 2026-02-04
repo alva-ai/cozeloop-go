@@ -43,6 +43,12 @@ type QueueConf struct {
 	SpanMaxExportBatchLength int
 }
 
+// LocalFileExportOptions configures local file export
+type LocalFileExportOptions struct {
+	Enabled  bool
+	FilePath string
+}
+
 var _ SpanProcessor = (*BatchSpanProcessor)(nil)
 
 type SpanProcessor interface {
@@ -57,6 +63,7 @@ func NewBatchSpanProcessor(
 	uploadPath *UploadPath,
 	finishEventProcessor func(ctx context.Context, info *consts.FinishEventInfo),
 	queueConf *QueueConf,
+	localFileOpts *LocalFileExportOptions,
 ) SpanProcessor {
 	var exporter Exporter
 	spanPath := pathIngestTrace
@@ -69,15 +76,27 @@ func NewBatchSpanProcessor(
 			filePath = uploadPath.fileUploadPath
 		}
 	}
-	exporter = &SpanExporter{
+
+	// Create the server exporter
+	serverExporter := &SpanExporter{
 		client: client,
 		uploadPath: UploadPath{
 			spanUploadPath: spanPath,
 			fileUploadPath: filePath,
 		},
 	}
+
+	// Determine the final exporter to use
 	if ex != nil {
+		// User provided a custom exporter
 		exporter = ex
+	} else if localFileOpts != nil && localFileOpts.Enabled {
+		// Local file export is enabled, create a multi-exporter
+		fileExporter := NewFileExporter(localFileOpts.FilePath)
+		exporter = NewMultiExporter(serverExporter, fileExporter)
+	} else {
+		// Default: just use the server exporter
+		exporter = serverExporter
 	}
 	spanQueueLength := DefaultMaxQueueLength
 	spanMaxExportBatchLength := DefaultMaxExportBatchLength
