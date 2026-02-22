@@ -11,10 +11,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/consts"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
-	"github.com/coze-dev/cozeloop-go/internal/stream"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/stream"
 )
 
 // ExecuteSSEParser implements SSEParser for ExecuteResult

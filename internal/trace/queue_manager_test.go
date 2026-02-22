@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	. "github.com/bytedance/mockey"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

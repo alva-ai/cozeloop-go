@@ -4,9 +4,9 @@
 package prompt
 
 import (
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/util"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 // toModelPrompt converts openapi.Prompt to entity.Prompt

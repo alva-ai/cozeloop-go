@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/coze-dev/cozeloop-go/internal"
+	"github.com/alva-ai/cozeloop-go/internal"
 )
 
 var (

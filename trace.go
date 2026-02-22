@@ -7,7 +7,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/internal/trace"
+	"github.com/alva-ai/cozeloop-go/internal/trace"
 )
 
 type TraceClient interface {

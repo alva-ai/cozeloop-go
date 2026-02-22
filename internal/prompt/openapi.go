@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/sync/singleflight"
 
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
 )
 
 const (

@@ -8,8 +8,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
 )
 
 // ExecuteOptions Execute选项

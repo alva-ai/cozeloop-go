@@ -7,7 +7,7 @@ import (
 	"context"
 	"runtime"
 
-	"github.com/coze-dev/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
 )
 
 // GoSafe Safely start a goroutine, which will automatically recover from panics and print stack information.

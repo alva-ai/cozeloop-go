@@ -12,8 +12,8 @@ import (
 
 	"github.com/bluele/gcache"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 const (

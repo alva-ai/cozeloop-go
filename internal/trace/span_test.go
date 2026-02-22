@@ -14,10 +14,10 @@ import (
 	"time"
 
 	. "github.com/bytedance/mockey"
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/consts"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -6,8 +6,8 @@ package cozeloop
 import (
 	"context"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/prompt"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/prompt"
 )
 
 // PromptClient interface of prompt client.

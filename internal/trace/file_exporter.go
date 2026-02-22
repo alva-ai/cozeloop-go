@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
 )
 
 const (

@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/internal/consts"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
-	"github.com/coze-dev/cozeloop-go/internal/util"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 type Provider struct {

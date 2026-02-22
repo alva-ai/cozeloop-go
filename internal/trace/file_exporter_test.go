@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/entity"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

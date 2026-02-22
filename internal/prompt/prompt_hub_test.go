@@ -13,9 +13,9 @@ import (
 	. "github.com/bytedance/mockey"
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
-	"github.com/coze-dev/cozeloop-go/internal/trace"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/trace"
 )
 
 func TestNewPromptProvider(t *testing.T) {

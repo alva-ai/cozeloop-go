@@ -4,7 +4,7 @@
 package cozeloop
 
 import (
-	"github.com/coze-dev/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
 )
 
 // Logger interface for logging

@@ -14,8 +14,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/internal/consts"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
 )
 
 type Client struct {

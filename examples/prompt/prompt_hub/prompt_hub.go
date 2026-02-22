@@ -10,10 +10,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go"
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/util"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 func main() {

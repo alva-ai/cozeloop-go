@@ -1,11 +1,11 @@
-module github.com/coze-dev/cozeloop-go
+module github.com/alva-ai/cozeloop-go
 
 go 1.18
 
 require (
+	github.com/alva-ai/cozeloop-go/spec v0.1.4-0.20250829072213-3812ddbfb735
 	github.com/bluele/gcache v0.0.2
 	github.com/bytedance/mockey v1.2.14
-	github.com/coze-dev/cozeloop-go/spec v0.1.4-0.20250829072213-3812ddbfb735
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/nikolalohinski/gonja/v2 v2.3.1
 	github.com/smartystreets/goconvey v1.8.1
@@ -30,4 +30,4 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 )
 
-replace github.com/coze-dev/cozeloop-go/spec => ./spec
+replace github.com/alva-ai/cozeloop-go/spec => ./spec

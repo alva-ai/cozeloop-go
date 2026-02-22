@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 // ServerSentEvent represents a Server-Sent Event

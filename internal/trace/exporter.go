@@ -10,13 +10,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/consts"
-	"github.com/coze-dev/cozeloop-go/internal/httpclient"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
-	model2 "github.com/coze-dev/cozeloop-go/internal/trace/model"
-	"github.com/coze-dev/cozeloop-go/internal/util"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/httpclient"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
+	model2 "github.com/alva-ai/cozeloop-go/internal/trace/model"
+	"github.com/alva-ai/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 type Exporter interface {

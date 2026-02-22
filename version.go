@@ -4,7 +4,7 @@
 package cozeloop
 
 import (
-	"github.com/coze-dev/cozeloop-go/internal"
+	"github.com/alva-ai/cozeloop-go/internal"
 )
 
 // Version returns the version of the loop package.

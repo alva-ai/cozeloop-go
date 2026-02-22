@@ -6,9 +6,9 @@ package cozeloop
 import (
 	"context"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
-	"github.com/coze-dev/cozeloop-go/internal/trace"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/internal/trace"
 )
 
 var DefaultNoopSpan = trace.DefaultNoopSpan

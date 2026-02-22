@@ -4,7 +4,7 @@
 package cozeloop
 
 import (
-	"github.com/coze-dev/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
 )
 
 var (

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go"
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 // The explanation of timeout settings is based on non-streaming execution, and it also applies to streaming execution.

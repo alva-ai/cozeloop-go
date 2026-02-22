@@ -6,7 +6,7 @@ package consts
 import (
 	"reflect"
 
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 // span

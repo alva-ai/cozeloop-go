@@ -4,7 +4,7 @@
 package entity
 
 import (
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 type Prompt struct {

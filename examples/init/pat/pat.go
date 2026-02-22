@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go"
 )
 
 // A simple example to init loop client by personal access token.

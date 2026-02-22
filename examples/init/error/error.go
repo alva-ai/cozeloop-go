@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/coze-dev/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go"
 )
 
 // A simple example about how to handle loop sdk errors.

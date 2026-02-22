@@ -8,7 +8,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 func TestPromptDeepCopy(t *testing.T) {

@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go"
-	"github.com/coze-dev/cozeloop-go/internal/logger"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go/internal/logger"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 type llmRunner struct {

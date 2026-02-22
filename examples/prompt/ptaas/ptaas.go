@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/coze-dev/cozeloop-go"
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/internal/util"
+	"github.com/alva-ai/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/internal/util"
 )
 
 func main() {

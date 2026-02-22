@@ -12,7 +12,7 @@ import (
 	"github.com/nikolalohinski/gonja/v2/nodes"
 	"github.com/nikolalohinski/gonja/v2/parser"
 
-	"github.com/coze-dev/cozeloop-go/internal/consts"
+	"github.com/alva-ai/cozeloop-go/internal/consts"
 )
 
 func init() {

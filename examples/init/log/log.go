@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/coze-dev/cozeloop-go"
+	"github.com/alva-ai/cozeloop-go"
 )
 
 // A simple example to change logger and log level.

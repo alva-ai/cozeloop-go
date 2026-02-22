@@ -7,8 +7,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/coze-dev/cozeloop-go/entity"
-	"github.com/coze-dev/cozeloop-go/spec/tracespec"
+	"github.com/alva-ai/cozeloop-go/entity"
+	"github.com/alva-ai/cozeloop-go/spec/tracespec"
 )
 
 // Span is the interface for span.
@@ -38,13 +38,13 @@ type Span interface {
 type commonSpanSetter interface {
 	// SetInput key: `input`
 	// Input information. The input will be serialized into a JSON string.
-	// You can find recommended specification in https://github.com/coze-dev/cozeloop-go/tree/main/spec/tracespec
+	// You can find recommended specification in https://github.com/alva-ai/cozeloop-go/tree/main/spec/tracespec
 	// Or you can use any struct you like.
 	SetInput(ctx context.Context, input interface{})
 
 	// SetOutput key: `output`
 	// Output information. The output will be serialized into a JSON string.
-	// You can find recommended specification in https://github.com/coze-dev/cozeloop-go/tree/main/spec/tracespec
+	// You can find recommended specification in https://github.com/alva-ai/cozeloop-go/tree/main/spec/tracespec
 	// Or you can use any struct you like.
 	SetOutput(ctx context.Context, output interface{})
 
