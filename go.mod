@@ -3,7 +3,7 @@ module github.com/alva-ai/cozeloop-go
 go 1.18
 
 require (
-	github.com/alva-ai/cozeloop-go/spec v0.1.4-0.20250829072213-3812ddbfb735
+	github.com/alva-ai/cozeloop-go/spec v0.0.0-20250829072213-3812ddbfb735
 	github.com/bluele/gcache v0.0.2
 	github.com/bytedance/mockey v1.2.14
 	github.com/golang-jwt/jwt v3.2.2+incompatible
